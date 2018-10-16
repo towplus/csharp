@@ -32,8 +32,7 @@ namespace ConsoleApp12
             }
             Console.WriteLine("{0}까지 합은 {1}", num, sum);
 
-            string str2[10] = Console.ReadLine();
-            //int num = int.Parse(str);
+            
 
 
             int x = 0, y = 0;
