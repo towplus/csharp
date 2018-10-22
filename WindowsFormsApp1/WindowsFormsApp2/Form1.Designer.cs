@@ -29,27 +29,27 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.txtMessage = new System.Windows.Forms.TextBox();
+            this.chkItalic = new System.Windows.Forms.CheckBox();
+            this.chkBold = new System.Windows.Forms.CheckBox();
+            this.comFont = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.checkBox2 = new System.Windows.Forms.CheckBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.radioButton3 = new System.Windows.Forms.RadioButton();
-            this.radioButton4 = new System.Windows.Forms.RadioButton();
-            this.label2 = new System.Windows.Forms.Label();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.lblSports = new System.Windows.Forms.Label();
+            this.rdoTkd = new System.Windows.Forms.RadioButton();
+            this.rdoBasketball = new System.Windows.Forms.RadioButton();
+            this.rdoBaseball = new System.Windows.Forms.RadioButton();
+            this.rdoSoccer = new System.Windows.Forms.RadioButton();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.textBox1);
-            this.groupBox1.Controls.Add(this.checkBox2);
-            this.groupBox1.Controls.Add(this.checkBox1);
-            this.groupBox1.Controls.Add(this.comboBox1);
+            this.groupBox1.Controls.Add(this.txtMessage);
+            this.groupBox1.Controls.Add(this.chkItalic);
+            this.groupBox1.Controls.Add(this.chkBold);
+            this.groupBox1.Controls.Add(this.comFont);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Location = new System.Drawing.Point(31, 23);
             this.groupBox1.Name = "groupBox1";
@@ -58,19 +58,48 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "폰트 설정";
             // 
-            // groupBox2
+            // txtMessage
             // 
-            this.groupBox2.Controls.Add(this.label2);
-            this.groupBox2.Controls.Add(this.radioButton4);
-            this.groupBox2.Controls.Add(this.radioButton3);
-            this.groupBox2.Controls.Add(this.radioButton2);
-            this.groupBox2.Controls.Add(this.radioButton1);
-            this.groupBox2.Location = new System.Drawing.Point(31, 303);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(699, 201);
-            this.groupBox2.TabIndex = 1;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "좋아하는 스포츠 하나만";
+            this.txtMessage.Location = new System.Drawing.Point(21, 120);
+            this.txtMessage.Name = "txtMessage";
+            this.txtMessage.Size = new System.Drawing.Size(485, 21);
+            this.txtMessage.TabIndex = 4;
+            this.txtMessage.Text = "오라클자바커뮤니티";
+            // 
+            // chkItalic
+            // 
+            this.chkItalic.AutoSize = true;
+            this.chkItalic.Location = new System.Drawing.Point(421, 47);
+            this.chkItalic.Name = "chkItalic";
+            this.chkItalic.Size = new System.Drawing.Size(72, 16);
+            this.chkItalic.TabIndex = 3;
+            this.chkItalic.Text = "이탤릭체\r\n";
+            this.chkItalic.UseVisualStyleBackColor = true;
+            this.chkItalic.CheckedChanged += new System.EventHandler(this.Form1_Load);
+            this.chkItalic.Enter += new System.EventHandler(this.chkItalic_CheckedChanged);
+            // 
+            // chkBold
+            // 
+            this.chkBold.AutoSize = true;
+            this.chkBold.Location = new System.Drawing.Point(302, 47);
+            this.chkBold.Name = "chkBold";
+            this.chkBold.Size = new System.Drawing.Size(48, 16);
+            this.chkBold.TabIndex = 2;
+            this.chkBold.Text = "굵게";
+            this.chkBold.UseVisualStyleBackColor = true;
+            this.chkBold.CheckedChanged += new System.EventHandler(this.Form1_Load);
+            this.chkBold.Enter += new System.EventHandler(this.chkBold_CheckedChanged);
+            // 
+            // comFont
+            // 
+            this.comFont.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.comFont.FormattingEnabled = true;
+            this.comFont.Location = new System.Drawing.Point(73, 45);
+            this.comFont.Name = "comFont";
+            this.comFont.Size = new System.Drawing.Size(168, 23);
+            this.comFont.TabIndex = 1;
+            this.comFont.SelectedIndexChanged += new System.EventHandler(this.Form1_Load);
+            this.comFont.Enter += new System.EventHandler(this.comFont_SelectedIndexChanged);
             // 
             // label1
             // 
@@ -81,94 +110,80 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "label1";
             // 
-            // comboBox1
+            // groupBox2
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(73, 45);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(168, 20);
-            this.comboBox1.TabIndex = 1;
+            this.groupBox2.Controls.Add(this.lblSports);
+            this.groupBox2.Controls.Add(this.rdoTkd);
+            this.groupBox2.Controls.Add(this.rdoBasketball);
+            this.groupBox2.Controls.Add(this.rdoBaseball);
+            this.groupBox2.Controls.Add(this.rdoSoccer);
+            this.groupBox2.Location = new System.Drawing.Point(31, 303);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(699, 201);
+            this.groupBox2.TabIndex = 1;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "좋아하는 스포츠 하나만";
             // 
-            // checkBox1
+            // lblSports
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(302, 47);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(48, 16);
-            this.checkBox1.TabIndex = 2;
-            this.checkBox1.Text = "굵게";
-            this.checkBox1.UseVisualStyleBackColor = true;
+            this.lblSports.AutoSize = true;
+            this.lblSports.Location = new System.Drawing.Point(62, 152);
+            this.lblSports.Name = "lblSports";
+            this.lblSports.Size = new System.Drawing.Size(149, 12);
+            this.lblSports.TabIndex = 4;
+            this.lblSports.Text = "선택한 스포츠가 없습니다.";
             // 
-            // checkBox2
+            // rdoTkd
             // 
-            this.checkBox2.AutoSize = true;
-            this.checkBox2.Location = new System.Drawing.Point(421, 47);
-            this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(72, 16);
-            this.checkBox2.TabIndex = 3;
-            this.checkBox2.Text = "이탤릭체\r\n";
-            this.checkBox2.UseVisualStyleBackColor = true;
+            this.rdoTkd.AutoSize = true;
+            this.rdoTkd.Location = new System.Drawing.Point(492, 100);
+            this.rdoTkd.Name = "rdoTkd";
+            this.rdoTkd.Size = new System.Drawing.Size(92, 16);
+            this.rdoTkd.TabIndex = 3;
+            this.rdoTkd.TabStop = true;
+            this.rdoTkd.Text = "radioButton4";
+            this.rdoTkd.UseVisualStyleBackColor = true;
+            this.rdoTkd.CheckedChanged += new System.EventHandler(this.rdoTkd_CheckedChanged);
+            this.rdoTkd.Enter += new System.EventHandler(this.rdoTkd_CheckedChanged);
             // 
-            // textBox1
+            // rdoBasketball
             // 
-            this.textBox1.Location = new System.Drawing.Point(21, 120);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(485, 21);
-            this.textBox1.TabIndex = 4;
-            this.textBox1.Text = "오라클자바커뮤니티";
+            this.rdoBasketball.AutoSize = true;
+            this.rdoBasketball.Location = new System.Drawing.Point(352, 99);
+            this.rdoBasketball.Name = "rdoBasketball";
+            this.rdoBasketball.Size = new System.Drawing.Size(92, 16);
+            this.rdoBasketball.TabIndex = 2;
+            this.rdoBasketball.TabStop = true;
+            this.rdoBasketball.Text = "radioButton3";
+            this.rdoBasketball.UseVisualStyleBackColor = true;
+            this.rdoBasketball.CheckedChanged += new System.EventHandler(this.rdoBasketball_CheckedChanged);
+            this.rdoBasketball.Enter += new System.EventHandler(this.rdoBasketball_CheckedChanged);
             // 
-            // radioButton1
+            // rdoBaseball
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(61, 99);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(92, 16);
-            this.radioButton1.TabIndex = 0;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "radioButton1";
-            this.radioButton1.UseVisualStyleBackColor = true;
+            this.rdoBaseball.AutoSize = true;
+            this.rdoBaseball.Location = new System.Drawing.Point(195, 100);
+            this.rdoBaseball.Name = "rdoBaseball";
+            this.rdoBaseball.Size = new System.Drawing.Size(92, 16);
+            this.rdoBaseball.TabIndex = 1;
+            this.rdoBaseball.TabStop = true;
+            this.rdoBaseball.Text = "radioButton2";
+            this.rdoBaseball.UseVisualStyleBackColor = true;
+            this.rdoBaseball.CheckedChanged += new System.EventHandler(this.rdoBaseball_CheckedChanged);
+            this.rdoBaseball.Enter += new System.EventHandler(this.rdoBaseball_CheckedChanged);
             // 
-            // radioButton2
+            // rdoSoccer
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(195, 100);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(92, 16);
-            this.radioButton2.TabIndex = 1;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "radioButton2";
-            this.radioButton2.UseVisualStyleBackColor = true;
-            // 
-            // radioButton3
-            // 
-            this.radioButton3.AutoSize = true;
-            this.radioButton3.Location = new System.Drawing.Point(352, 99);
-            this.radioButton3.Name = "radioButton3";
-            this.radioButton3.Size = new System.Drawing.Size(92, 16);
-            this.radioButton3.TabIndex = 2;
-            this.radioButton3.TabStop = true;
-            this.radioButton3.Text = "radioButton3";
-            this.radioButton3.UseVisualStyleBackColor = true;
-            // 
-            // radioButton4
-            // 
-            this.radioButton4.AutoSize = true;
-            this.radioButton4.Location = new System.Drawing.Point(492, 100);
-            this.radioButton4.Name = "radioButton4";
-            this.radioButton4.Size = new System.Drawing.Size(92, 16);
-            this.radioButton4.TabIndex = 3;
-            this.radioButton4.TabStop = true;
-            this.radioButton4.Text = "radioButton4";
-            this.radioButton4.UseVisualStyleBackColor = true;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(62, 152);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(149, 12);
-            this.label2.TabIndex = 4;
-            this.label2.Text = "선택한 스포츠가 없습니다.";
+            this.rdoSoccer.AutoSize = true;
+            this.rdoSoccer.Location = new System.Drawing.Point(61, 99);
+            this.rdoSoccer.Name = "rdoSoccer";
+            this.rdoSoccer.Size = new System.Drawing.Size(92, 16);
+            this.rdoSoccer.TabIndex = 0;
+            this.rdoSoccer.TabStop = true;
+            this.rdoSoccer.Text = "radioButton1";
+            this.rdoSoccer.UseVisualStyleBackColor = true;
+            this.rdoSoccer.CheckedChanged += new System.EventHandler(this.rdoSoccer_CheckedChanged);
+            this.rdoSoccer.Enter += new System.EventHandler(this.rdoSoccer_CheckedChanged);
             // 
             // Form1
             // 
@@ -191,17 +206,17 @@
         #endregion
 
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.CheckBox checkBox2;
-        private System.Windows.Forms.CheckBox checkBox1;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.TextBox txtMessage;
+        private System.Windows.Forms.CheckBox chkItalic;
+        private System.Windows.Forms.CheckBox chkBold;
+        private System.Windows.Forms.ComboBox comFont;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.RadioButton radioButton4;
-        private System.Windows.Forms.RadioButton radioButton3;
-        private System.Windows.Forms.RadioButton radioButton2;
-        private System.Windows.Forms.RadioButton radioButton1;
+        private System.Windows.Forms.Label lblSports;
+        private System.Windows.Forms.RadioButton rdoTkd;
+        private System.Windows.Forms.RadioButton rdoBasketball;
+        private System.Windows.Forms.RadioButton rdoBaseball;
+        private System.Windows.Forms.RadioButton rdoSoccer;
     }
 }
 

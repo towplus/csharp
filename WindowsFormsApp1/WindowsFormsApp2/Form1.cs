@@ -17,8 +17,12 @@ namespace WindowsFormsApp2
             InitializeComponent();
         }
 
+        
+
         private void Form1_Load(object sender, EventArgs e)
         {
+
+
             var font = FontFamily.Families;
             foreach (FontFamily f in font)
             {
@@ -43,5 +47,46 @@ namespace WindowsFormsApp2
             }
             txtMessage.Font = new Font((string)comFont.SelectedItem, 10, fs);
         }
+        private void comFont_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            ChangeFont();
+        }
+        private void chkBold_CheckedChanged(object sender, EventArgs e)
+        {
+            ChangeFont();
+        }
+        private void chkItalic_CheckedChanged(object sender, EventArgs e)
+        {
+            ChangeFont();
+        }
+        enum Sports : int
+        {
+            축구, 야구, 농구, 태권도
+        }
+        private Sports selectedSports;
+
+        private void rdoSoccer_CheckedChanged(object sender, EventArgs e)
+        {
+            this.selectedSports = (Sports)0; //축구
+            lblSports.Text = selectedSports + "(을)를 선택했습니다.";
+        }
+        private void rdoBaseball_CheckedChanged(object sender, EventArgs e)
+        {
+            this.selectedSports = (Sports)1; //야구
+            lblSports.Text = selectedSports + "(을)를 선택했습니다.";
+        }
+        private void rdoBasketball_CheckedChanged(object sender, EventArgs e)
+        {
+            this.selectedSports = (Sports)2; //농구
+            lblSports.Text = selectedSports + "(을)를 선택했습니다.";
+        }
+
+        private void rdoTkd_CheckedChanged(object sender, EventArgs e)
+        {
+            this.selectedSports = (Sports)3; //태권도
+            lblSports.Text = selectedSports + "(을)를 선택했습니다.";
+        }
     }
 }
+
+
