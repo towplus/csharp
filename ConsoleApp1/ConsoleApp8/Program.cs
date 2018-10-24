@@ -1,49 +1,79 @@
 ﻿using System;
-using System.Data.OleDb;
-using System.Collections.Generic;
-using System.Linq;
+using System.IO;
+using System.Net;
+using System.Net.Sockets;
 using System.Text;
-using System.Threading.Tasks;
-using Oracle.ManagedDataAccess.Client;
+using System.Threading;
+using System.Collections.Generic;
 
-
-namespace ConsoleApp8
+class ClientHadler
 {
-    class Program
+    Socket socket = null;
+    NetworkStream stream = null;
+    StreamReader reader = null;
+    StreamWriter writer = null;
+
+    public ClientHadler(Socket socket)
     {
-        static void Main(string[] args)
+        this.socket = socket;
+        Server.list.Add(socket);
+    }
+
+    public void chat()
+    {
+        stream = new NetworkStream(socket);
+        Encoding encode = Encoding.GetEncoding("utf-8");
+
+        reader = new StreamReader(stream, encode);
+
+        while (true)
         {
-            string str = @"Data Source = (DESCRIPTION =
-                (ADDRESS = (PROTOCOL = TCP)(HOST = 192.168.0.27)(PORT = 1521))
-                (CONNECT_DATA =
-                (SERVER = DEDICATED)
-                (SERVICE_NAME = topcredu)
-                )
-                ); User Id = scott;Password = tiger; Provider = OraOleDB.Oracle";//오라클클라이언트를 안깔았을때
-            //string str = "data source=topcredu; user id=scott; password=tiger";
-            OleDbConnection Conn = new OleDbConnection(str);
-            OleDbCommand Comm;
-            Comm = new OleDbCommand();
-            Comm.Connection = Conn;
-            try
+            string str = reader.ReadLine().Trim();
+            Console.WriteLine(str);
+
+            foreach (Socket sok in Server.list)
             {
-                Conn.Open();
-                Comm.CommandText = "SELECT ENAME FROM EMP";
-                OleDbDataReader reader = Comm.ExecuteReader();
-                while (reader.Read())
-                {
-                    Console.WriteLine(reader.GetString(reader.GetOrdinal("ENAME")));
-                }
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine(ex.ToString());
-            }
-            finally
-            {
-                Conn.Close();
+                stream = new NetworkStream(sok);
+                writer = new StreamWriter(stream, encode) { AutoFlush = true };
+                writer.WriteLine(str);
+                writer = null;
             }
         }
     }
-}
-   
+}
+
+class Server
+{
+    public static List<Socket> list = new List<Socket>();
+
+    public static void Main()
+    {
+        TcpListener tcpListener = null;
+        Socket clientsocket = null;
+
+        try
+        {
+            IPAddress ipAd = IPAddress.Parse("127.0.0.1");
+
+            tcpListener = new TcpListener(ipAd, 5001);
+            tcpListener.Start();
+
+            while (true)
+            {
+                clientsocket = tcpListener.AcceptSocket();
+
+                ClientHadler cHandler = new ClientHadler(clientsocket);
+                Thread t = new Thread(cHandler.chat);
+                t.Start();
+            }
+        }
+        catch (Exception e)
+        {
+            Console.WriteLine(e.ToString());
+        }
+        finally
+        {
+            clientsocket.Close();
+        }
+    }
+}
