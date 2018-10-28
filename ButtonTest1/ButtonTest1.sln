@@ -27,6 +27,14 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DigitalClock", "DigitalCloc
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WPFDataBinding", "WPFDataBinding\WPFDataBinding.csproj", "{00A57E55-0C40-41F8-B2FF-4AEB9CD1B067}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LoginWindow", "test9\LoginWindow.csproj", "{5DD55EC5-EF18-47D5-B12C-AC46CE49DFCB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "home", "home\home.csproj", "{B8F04275-28AD-404C-AD01-0E0AFE9CB7C9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfApp1", "WpfApp1\WpfApp1.csproj", "{E8E54237-A509-4159-8A00-481366874C0B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Example01", "Example01\Example01.csproj", "{6B6A9F33-06A3-432F-9C65-92DD8A3B170F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -81,6 +89,22 @@ Global
 		{00A57E55-0C40-41F8-B2FF-4AEB9CD1B067}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{00A57E55-0C40-41F8-B2FF-4AEB9CD1B067}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{00A57E55-0C40-41F8-B2FF-4AEB9CD1B067}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5DD55EC5-EF18-47D5-B12C-AC46CE49DFCB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5DD55EC5-EF18-47D5-B12C-AC46CE49DFCB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5DD55EC5-EF18-47D5-B12C-AC46CE49DFCB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5DD55EC5-EF18-47D5-B12C-AC46CE49DFCB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B8F04275-28AD-404C-AD01-0E0AFE9CB7C9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B8F04275-28AD-404C-AD01-0E0AFE9CB7C9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B8F04275-28AD-404C-AD01-0E0AFE9CB7C9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B8F04275-28AD-404C-AD01-0E0AFE9CB7C9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E8E54237-A509-4159-8A00-481366874C0B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E8E54237-A509-4159-8A00-481366874C0B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E8E54237-A509-4159-8A00-481366874C0B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E8E54237-A509-4159-8A00-481366874C0B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6B6A9F33-06A3-432F-9C65-92DD8A3B170F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6B6A9F33-06A3-432F-9C65-92DD8A3B170F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6B6A9F33-06A3-432F-9C65-92DD8A3B170F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6B6A9F33-06A3-432F-9C65-92DD8A3B170F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
