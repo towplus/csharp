@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28010.2046
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HomeWork", "HomeWork\HomeWork.csproj", "{798CB6B5-54C6-422D-AB64-30FACFCC0B3D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfApp2", "WpfApp2\WpfApp2.csproj", "{165558C4-1DEA-43E2-97D8-AF402D22D075}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "INotifyTest", "INotifyTest\INotifyTest.csproj", "{45BC40EC-16AA-495C-BA83-A1689EE29372}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{798CB6B5-54C6-422D-AB64-30FACFCC0B3D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{798CB6B5-54C6-422D-AB64-30FACFCC0B3D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{798CB6B5-54C6-422D-AB64-30FACFCC0B3D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{798CB6B5-54C6-422D-AB64-30FACFCC0B3D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{165558C4-1DEA-43E2-97D8-AF402D22D075}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{165558C4-1DEA-43E2-97D8-AF402D22D075}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{165558C4-1DEA-43E2-97D8-AF402D22D075}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{165558C4-1DEA-43E2-97D8-AF402D22D075}.Release|Any CPU.Build.0 = Release|Any CPU
+		{45BC40EC-16AA-495C-BA83-A1689EE29372}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{45BC40EC-16AA-495C-BA83-A1689EE29372}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{45BC40EC-16AA-495C-BA83-A1689EE29372}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{45BC40EC-16AA-495C-BA83-A1689EE29372}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {5A6225A5-E93C-4D74-8222-A6AD0C2B5B82}
+	EndGlobalSection
+EndGlobal
