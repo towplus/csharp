@@ -5,3 +5,7 @@ string str = @"Data Source = (DESCRIPTION =
                 (SERVICE_NAME = topcredu)
                 )
                 ); User Id = scott;Password = tiger";
+
+
+
+https://kmong.com
