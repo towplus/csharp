@@ -9,3 +9,116 @@ string str = @"Data Source = (DESCRIPTION =
 
 
 https://kmong.com
+
+RPA
+
+안드로이드 
+수업자료 다운로드
+https://goo.gl/RUSgnT
+
+안드로이드 개발환경 구축하기
+1.Java
+2.Android Studio
+검색:android studio download
+https://developer.android.com/studio/
+2.1 Android Library Update(Optional)
+3.Android SDK
+4.Emulater(앱을 실행해서테스트하는 도구)
+-Android Virtual Device
+-3rd Party Emulater: 지니모션(학습용은 무료)
+-휴대폰(개발모드환경)
+
+
+스마트폰 빌드번호 연타~~~개발자옵션생김
+개발자 옵션-usb디버깅 온
+
+안드로이드 4대 구성요소
+1.Activity : 화면
+-~.java : 상태정보(변수),이벤트 함수
+-~.xml : 화면구성 Html 처럼 태그로 화면을 구성
+2.Service
+- 화면은 없지만 로직을 별도로 제공해야 함
+3.Receiver
+- 휴대폰 레벨의 이벤트 리스너(예: 이어폰 연결)
+4.Provider
+-앱이 가진 데이터를 다른 앱에게 제공
+ex- Google App: 전화,연락처,일정관리
+   - Samsung App: 삼성관련앱
+   - KT App: 통신사자체
+   - 자체개발앱
+서로 데이터를 주고받는 역활
+
+단축키
+코드 정렬(Reformat Code) ? Ctrl + Alt + L
+메소드 오버라이드 하기(Method Override) ? Ctrl + o
+인터페이스 메소드 구현(Method Implements) ? Ctrl + i
+클래스, 메소드 API문서 보기(Quick Documentation Lookup) ? Ctrl + Q
+프로젝트 내부에서 문자열 찾기? Ctrl + Shift + F
+
+안드로이드 OS 무엇인가요?
+리눅스
+
+1.버츄얼 디바이스
+-AVD
+-지니모션
+2.실제 휴대폰
+
+Instant Run: 앱을 새로 설치하지 않고 변경부분만 적용
+
+실행버튼 클릭 시 작업내용
+1 프로그램 빌드
+2 연결장치에 설치
+3 앱을 기동
+
+
+인텐트 플래그 예제
+Activity 1 >> Activity 2 >> Activity 3
+
+#2                  #1
+#3	         #3
+
+안드로이드 학습법
+무언가가 필요한데 어떤 방식이 좋은지 조사
+선택한 후에 학습
+
+자마린
+동시에 안드로이드앱 아이폰 앱을 제작하는 기술
+
+터치 : 30번 1초에 인식 후에 클릭이벤트 작동여부 결정 ex)손으로 그리기
+클릭 :1번 눌렀다..
+더블클릭 : 웹에만 존재
+롱클릭 : 0.3초 이상 누르면 클릭이벤트가 롱클릭 이벤트로 전환
+드래그 :웹용어
+Swipe : 앱용어
+
+브로드캐스팅리시버
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
